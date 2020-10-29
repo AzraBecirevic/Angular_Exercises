@@ -1,2 +1,37 @@
+<label>Serevr Name</label>
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<!-- $event to show output, what user entered, value of the filed-->
+<!-- $event - reserved word wich gives us access to the eevnt data-->
+
+
+<!-- Two way binding -->
+<!-- In two way binding we combine property and event binding-->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<!--  [(ngModel)]="serverName"  it will triger onTheInput event and update value of Servername
+      it will also update the value of the input element
+-->
+
+<!--<p>{{ serverName }}</p>-->
+<br>
+<button class="btn btn-primary" [disabled] = "!allowNewServer" (click)="onCreateServer()">Add Server</button>   <!-- Property binding -->
+<!-- intead of onclick="" (nameOfTheEvent) npr onclick->click -->
+<!-- ()=" code we want to execute "-->
+<!--<p>{{ allowNewServer }}</p>
+<!-- ili -/->
+<p [innerText] = "allowNewServer"></p>-->
+
+<!--
+How do you know to which Properties or Events of HTML Elements you may bind? You can basically bind to all 
+Properties and Events - a good idea is to console.log()  the element you're interested in to see which properties 
+and events it offers.
+
+Important: For events, you don't bind to onclick but only to click (=> (click)).
+
+The MDN (Mozilla Developer Network) offers nice lists of all properties and events of the element you're interested
+ in. Googling for YOUR_ELEMENT properties  or YOUR_ELEMENT events  should yield nice results.
+-->
+
+<p>{{ serverCreationStatus }}</p>
+<br>
 <app-server></app-server>
 <app-server></app-server>
