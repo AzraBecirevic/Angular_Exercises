@@ -1,4 +1,15 @@
-<p> {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<p [ngStyle] = "{backgroundColor: getColor() }"
+   [ngClass] = "{online: serverStatus==='online'}"    
+> 
+    {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+</p>
                                             <!-- {{ serverStatus }} -->
 
-<!-- String interpolation has tp resolve to string in the end-->
+<!-- String interpolation has to resolve to string in the end-->
+
+
+<!-- [ngStyle] [] indicate that we want to bind to same property on this directive-->
+<!-- [ngStyle] is property-->
+
+<!-- ngStyle alows us to change css-->
+<!-- ngClass alows us to dinamically add or remove css classes-->
